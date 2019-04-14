@@ -12,8 +12,7 @@ namespace ManipulacaoArquivosIBGE
         static void Main(string[] args)
         {            
             StreamReader reader = new StreamReader("../../ibge.csv");
-            int totalAcessoTodosSul = 0;
-            int totalAcessoMoveisCentroOeste = 0;
+            int totalAcessoTodosSul = 0;            
             int[] totalAcessoMovelRegiao = new int[5];
             int totalAcessoMoveisBrasil = 0;
             reader.ReadLine();
@@ -24,16 +23,6 @@ namespace ManipulacaoArquivosIBGE
                 dados.estado = dadosBruto[0];
                 dados.total = int.Parse(dadosBruto[1].Replace(" ",""));
                 dados.movel = int.Parse(dadosBruto[2].Replace(" ",""));
-                
-                if(dados.estado.ToUpper() == "PARAN�" || dados.estado.ToUpper() == "SANTA CATARINA" || dados.estado.ToUpper() == "RIO GRANDE DO SUL")
-                {
-                    totalAcessoTodosSul += dados.total;
-                }
-
-                if (dados.estado.ToUpper() == "MATO GROSSO DO SUL" || dados.estado.ToUpper() == "MATO GROSSO" || dados.estado.ToUpper() == "GOI�S" || dados.estado.ToUpper() == "DISTRITO FEDERAL")
-                {
-                    totalAcessoMoveisCentroOeste += dados.movel;
-                }
 
                 switch (dados.estado.ToUpper())
                 {
@@ -71,6 +60,7 @@ namespace ManipulacaoArquivosIBGE
                     case "RIO GRANDE DO SUL":
                         //code Sul
                         totalAcessoMovelRegiao[3] += dados.movel;
+                        totalAcessoTodosSul += dados.total;
                         break;
                     case "MATO GROSSO DO SUL":
                     case "MATO GROSSO":
@@ -85,14 +75,15 @@ namespace ManipulacaoArquivosIBGE
             }
 
             Console.WriteLine("Quantidade total de acesso à Internet por todos os tipos de aparelhos no Sul : {0}",totalAcessoTodosSul);            
-            Console.WriteLine("Quantidade total de acesso por aparelhos móveis no Centro-Oeste : {0}", totalAcessoMoveisCentroOeste);
+            Console.WriteLine("Quantidade total de acesso por aparelhos móveis no Centro-Oeste : {0}", totalAcessoMovelRegiao[4]);
             Console.WriteLine("Quantidade total de acesso por dispositivo móvel por região : ");
             Console.WriteLine("Norte : {0}",totalAcessoMovelRegiao[0]);
             Console.WriteLine("Nordeste : {0}",totalAcessoMovelRegiao[1]);
             Console.WriteLine("Sudeste : {0}", totalAcessoMovelRegiao[2]);
             Console.WriteLine("Sul : {0}", totalAcessoMovelRegiao[3]);
             Console.WriteLine("Centro-Oeste : {0}", totalAcessoMovelRegiao[4]);
-            Console.WriteLine("Quantidade total de acesso à Internet por dispositivos móveis no Brasil : {0}",totalAcessoMoveisBrasil);            
+            Console.WriteLine("Quantidade total de acesso à Internet por dispositivos móveis no Brasil : {0}",totalAcessoMoveisBrasil);
+            reader.Close();
             Console.ReadKey();            
         }
     }
