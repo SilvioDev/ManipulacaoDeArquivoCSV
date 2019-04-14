@@ -1,0 +1,7 @@
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\bin\Debug\ManipulacaoArquivosIBGE.exe.config
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\bin\Debug\ManipulacaoArquivosIBGE.exe
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\bin\Debug\ManipulacaoArquivosIBGE.pdb
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\obj\Debug\ManipulacaoArquivosIBGE.csprojAssemblyReference.cache
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\obj\Debug\ManipulacaoArquivosIBGE.csproj.CoreCompileInputs.cache
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\obj\Debug\ManipulacaoArquivosIBGE.exe
+C:\Users\G1745 IRON\Desktop\ManipulacaoArquivoIBGE\ManipulacaoArquivosIBGE\ManipulacaoArquivosIBGE\obj\Debug\ManipulacaoArquivosIBGE.pdb
